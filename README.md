@@ -1,17 +1,18 @@
 
 # ASP.NET CORE - Pokedex (Bilingual)
 
+<br>
 😀 **¡Hola!** 😀
 
 Por aquí les traigo mi nuevo proyecto desarrollado con la tecnología
 de .NET CORE, así es, Mi .NET Pokedex
-
+<br><br>
 
 😀 **Greetings!** 😀
 
 Now, I leave you me newest project, developed with .NET CORE technology
 Yes it is, My DOTNET Pokedex.
-
+<br><br>
 
 ## 🖼 Screenshot / Capturas de Pantalla 🖼
 
@@ -45,7 +46,7 @@ Yes it is, My DOTNET Pokedex.
 
 ---
 ## ✨ Features / Características 🌟
- 
+
 En el proyecto tenemos las siguientes: 🌟🌟
 
 - 🛠 Crear, Listar, Actualizar y Eliminar Pokemones. 🛠
