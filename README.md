@@ -7,7 +7,7 @@ Por aquí les traigo mi nuevo proyecto desarrollado con la tecnología
 de .NET CORE, así es, Mi .NET Pokedex
 
 
-😀 **Greetings!**😀
+😀 **Greetings!** 😀
 
 Now, I leave you me newest project, developed with .NET CORE technology
 Yes it is, My DOTNET Pokedex.
