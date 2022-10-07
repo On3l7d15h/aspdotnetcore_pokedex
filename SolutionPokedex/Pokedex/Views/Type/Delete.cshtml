@@ -1,0 +1,32 @@
+﻿@*Strong Typed*@
+@model Application.ViewModels.SavePokemonTypeViewModel
+@{
+    ViewData["Title"] = "Start";
+}
+
+<section>
+    <div class="flex flex-col justify-start items-center h-[82.65vh]">
+        <!-- Created Pokemons -->
+        <h1 class="text-4xl text-center font-bold my-5">Pokedex</h1>
+        <section class="w-[30rem] h-[13.75rem] rounded shadow bg-white  flex flex-col justify-start overflow-hidden">
+            <div class="bg-red-400 text-center py-3 text-2xl text-white w-full">
+                <h1>Delete type</h1>
+            </div>
+            <div class="flex flex-col justify-evenly text-center items-center w-[25rem] mx-auto mt-6">
+                <form method="post" asp-controller="Type" asp-action="DeletePost">
+                    <input asp-for="Id" hidden />
+                    <label>Are you sure to delete the @Model.Name type?</label>
+                    <section class="flex flex-row justify-evenly items-center w-[25rem] mx-auto mt-6">
+                        <button type="submit" class="w-[10rem] p-2 rounded border-2 border-red-300 text-red-400 hover:bg-red-300 hover:text-white transition duration-300">
+                            Delete it
+                        </button>
+                        <a asp-controller="Type" asp-action="Index" class="w-[10rem] text-center p-2 rounded border-2 border-red-300 bg-red-300 text-white hover:bg-red-200 hover:border-red-200 transition duration-300">
+                            Go back
+                        </a>
+                    </section>
+                </form>
+           </div>
+        </section>
+    </div>
+
+</section>

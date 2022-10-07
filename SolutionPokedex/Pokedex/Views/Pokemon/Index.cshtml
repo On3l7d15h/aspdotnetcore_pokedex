@@ -1,0 +1,60 @@
+﻿@*Strong Typed*@
+@model List<Application.ViewModels.PokemonViewModel>
+@{
+    ViewData["Title"] = "Start";
+}
+
+<section>
+
+    <div class="w-[60rem] flex flex-row justify-between my-4 mx-auto items-center">
+        <h1 class="text-4xl text-center font-bold my-5">Pokemones</h1>
+        <a asp-controller="Pokemon" asp-action="Create" class="p-2 rounded border-2 border-red-400 text-red-500 hover:bg-red-400 hover:text-white transition duration-300">Create</a>
+    </div>
+
+    <div class="flex flex-row justify-evenly items-center">
+
+        <!-- Maintenance Pokemons -->
+        <section class="w-[60rem] h-[31.75rem] rounded shadow bg-white flex flex-col justify-start">
+            <div class="bg-red-400 text-center py-3 text-2xl text-white w-full">
+                <h1>Pokemones</h1>
+            </div>
+            <div class="w-full overflow-y-scroll">
+
+                @if (Model.Count() > 0)
+                {
+                    foreach (var item in Model)
+                    {
+                        <div class="bg-white text-center py-1 w-full flex flex-row justify-between px-2 items-center border-b-2 border-red-500/20">
+                            <div class='border-2 border-red-500 rounded-full w-16 h-16 overflow-hidden'>
+                                <img src="@item.ImageUrl" class="w-full h-full" />
+                            </div>
+                            <div>
+                                <h1 class="text-xl">@item.Name</h1>
+                                <p>@item.Region Region</p>
+                            </div>
+                            <div class="">
+                                <span class="p-2 bg-red-400 text-white rounded">@item.Type1</span>
+                                @if (item.Type2 != null && item.Type2.Trim() != "")
+                                {
+                                    <span class="p-2 bg-red-400 text-white rounded">@item.Type2</span>
+                                }
+                            </div>
+                            <!--actions-->
+                            <div>
+                                <a asp-controller="Pokemon" asp-action="Update" asp-route-id="@item.Id" class="p-2 rounded border-2 border-red-300 text-red-400 hover:bg-red-300 hover:text-white transition duration-300">Update</a>
+                                <a asp-controller="Pokemon" asp-action="Delete" asp-route-id="@item.Id" class="p-2 rounded border-2 border-red-300 text-red-400 hover:bg-red-300 hover:text-white transition duration-300">Delete</a>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="text-center py-2 text-2xl text-white">
+                        <h1>Clay</h1>
+                    </div>
+                }
+            </div>
+        </section>
+    </div>
+
+</section>

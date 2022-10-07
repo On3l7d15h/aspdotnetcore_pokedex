@@ -1,0 +1,49 @@
+﻿@*Strong Typed*@
+@model List<Application.ViewModels.PokemonTypeViewModel>;
+@{
+    ViewData["Title"] = "Start";
+}
+
+<section>
+
+    <div class="w-[60rem] flex flex-row justify-between my-4 mx-auto items-center">
+        <h1 class="text-4xl text-center font-bold my-5">Pokedex</h1>
+        <a asp-controller="Type" asp-action="Create" class="p-2 rounded border-2 border-red-400 text-red-500 hover:bg-red-400 hover:text-white transition duration-300">Create</a>
+    </div>
+
+    <div class="flex flex-row justify-evenly items-center">
+
+        <!-- Maintenance Pokemons -->
+        <section class="w-[60rem] h-[31.75rem] rounded shadow bg-white flex flex-col justify-start">
+            <div class="bg-red-400 text-center py-3 text-2xl text-white w-full">
+                <h1>Pokemon Types</h1>
+            </div>
+            <div class="w-full h-full flex py-2 flex-row justify-center overflow-y-scroll items-start gap-2 flex-wrap">
+                @if (Model.Count() > 0)
+                {
+                    foreach (var item in Model)
+                    {
+                        <div class="bg-red-300 rounded text-center shadow p-3 w-[16rem] h-[9.5rem] my-1 flex flex-col justify-between items-center border-b-4 border-red-500/60">
+                            <div>
+                                <h1 class="text-3xl text-white">@item.Name</h1>
+                                <p class="text-white/60">type</p>
+                            </div>
+                            <!--actions-->
+                            <div class="mb-2">
+                                <a asp-controller="Type" asp-action="Update" asp-route-id="@item.Id" class="p-2 rounded border-2 border-white text-white hover:bg-white hover:text-red-300 transition duration-300">Update</a>
+                                <a asp-controller="Type" asp-action="Delete" asp-route-id="@item.Id" class="p-2 rounded border-2 border-white text-white hover:bg-white hover:text-red-300 transition duration-300">Delete</a>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="text-center py-2 text-2xl text-white">
+                        <h1>No regions... yet</h1>
+                    </div>
+                }
+            </div>
+        </section>
+    </div>
+
+</section>

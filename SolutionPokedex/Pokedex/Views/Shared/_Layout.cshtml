@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] | Pokedex</title>
+    <!--
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/Pokedex.styles.css" asp-append-version="true" />
+    -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <header>
+        <nav class="w-full flex flex-row justify-start items-center bg-red-500 p-2">
+            <div class="flex flex-row">
+                <a class="flex flex-row w-[10rem] text-2xl justify-start items-center text-white transition duration-300 font-bold" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/resources/icon/pokeball.png" class="w-12 h-12 mx-2" />
+                    Pokedex
+                </a>
+                <!--
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                -->
+                <div class="flex flex-row w-auto justify-content-center items-center gap-2 ml-3">
+                    <a class="text-white hover:text-red-200 transition duration-300" asp-area="" asp-controller="Pokemon" asp-action="Index">Pokemones</a>
+                    <a class="text-white hover:text-red-200 transition duration-300" asp-area="" asp-controller="Region" asp-action="Index">Regiones</a>
+                    <a class="text-white hover:text-red-200 transition duration-300" asp-area="" asp-controller="Type" asp-action="Index">Tipos de Pokemones</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="bg-gray-700 p-3 text-white">
+        <div class="text-center">
+            &copy; 2022 - Pokedex - <a class="hover:text-red-400 transition duration-300" href="https://github.com/On3l7d15h">On3l7d15h</a>
+        </div>
+    </footer>
+    <!-- 
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    -->
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,15 @@
+C:\Users\onell\source\repos\SolutionPokedex\Application\obj\Debug\net6.0\Application.csproj.AssemblyReference.cache
+C:\Users\onell\source\repos\SolutionPokedex\Application\obj\Debug\net6.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\onell\source\repos\SolutionPokedex\Application\obj\Debug\net6.0\Application.AssemblyInfoInputs.cache
+C:\Users\onell\source\repos\SolutionPokedex\Application\obj\Debug\net6.0\Application.AssemblyInfo.cs
+C:\Users\onell\source\repos\SolutionPokedex\Application\obj\Debug\net6.0\Application.csproj.CoreCompileInputs.cache
+C:\Users\onell\source\repos\SolutionPokedex\Application\bin\Debug\net6.0\Application.deps.json
+C:\Users\onell\source\repos\SolutionPokedex\Application\bin\Debug\net6.0\Application.dll
+C:\Users\onell\source\repos\SolutionPokedex\Application\bin\Debug\net6.0\Application.pdb
+C:\Users\onell\source\repos\SolutionPokedex\Application\bin\Debug\net6.0\Database.dll
+C:\Users\onell\source\repos\SolutionPokedex\Application\bin\Debug\net6.0\Database.pdb
+C:\Users\onell\source\repos\SolutionPokedex\Application\obj\Debug\net6.0\Application.csproj.CopyComplete
+C:\Users\onell\source\repos\SolutionPokedex\Application\obj\Debug\net6.0\Application.dll
+C:\Users\onell\source\repos\SolutionPokedex\Application\obj\Debug\net6.0\refint\Application.dll
+C:\Users\onell\source\repos\SolutionPokedex\Application\obj\Debug\net6.0\Application.pdb
+C:\Users\onell\source\repos\SolutionPokedex\Application\obj\Debug\net6.0\ref\Application.dll
